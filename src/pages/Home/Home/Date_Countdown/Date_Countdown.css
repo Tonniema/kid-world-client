@@ -1,0 +1,98 @@
+.containers {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 8%;
+  }
+  
+  .containers::before {
+    content: "";
+    background-image: url(../../../../assets/image/background.png);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.8;
+  }
+  
+  .text {
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: white;
+  }
+  
+  .text h1 {
+    font-size: 64px;
+    font-weight: 500;
+  }
+  
+  .text h1 span {
+    color: #ff3753;
+  }
+  
+  .launch-time {
+    display: flex;
+  }
+  
+  .launch-time div {
+    flex-basis: 100px;
+  }
+  
+  .launch-time div p {
+    font-size: 60px;
+    margin-bottom: -14px;
+  }
+  
+  .rocket {
+    width: 150px;
+    position: absolute;
+    left: 140%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+  }
+  
+  @keyframes rocket {
+    0% {
+      bottom: 0;
+      opacity: 0;
+    }
+    100% {
+      bottom: 105%;
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .text h1 {
+      font-size: 48px;
+    }
+  
+    .launch-time div p {
+      font-size: 48px;
+    }
+  
+    .rocket {
+      width: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text h1 {
+      font-size: 32px;
+    }
+  
+    .launch-time div p {
+      font-size: 32px;
+    }
+  
+    .rocket {
+      width: 90px;
+      left: 120%;
+    }
+  }
+  
